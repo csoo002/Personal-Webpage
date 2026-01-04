@@ -1,4 +1,4 @@
-/* General Reset */
+/* 全局重置 */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,26 +12,44 @@ body {
     background-color: #f4f7f6;
 }
 
-/* Layout */
+/* 布局容器 */
 .container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Header */
+/* Header / Hero 区域样式 */
 header.hero {
     background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
     color: white;
-    padding: 60px 0;
+    padding: 50px 0;
     text-align: center;
     margin-bottom: 30px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
+/* 个人照片样式 */
+.profile-container {
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* 确保照片填充且不变形 */
+    border-radius: 50%; /* 圆形图片 */
+    border: 4px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: 0 auto; /* 图片水平居中 */
+    background-color: #fff; /* 避免透明图片背景色问题 */
+}
+
+/* 名字和标题 */
 header h1 {
     font-size: 3rem;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     letter-spacing: 1px;
 }
 
@@ -42,27 +60,41 @@ header h2 {
     opacity: 0.9;
 }
 
+/* 联系方式 */
 .contact-info {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
     flex-wrap: wrap;
-    font-size: 0.95rem;
+    font-size: 1rem;
 }
 
 .contact-info span i {
-    margin-right: 5px;
+    margin-right: 8px;
+    opacity: 0.8;
 }
 
-/* Main Content Layout */
+.contact-info a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px dashed rgba(255,255,255,0.5);
+    transition: all 0.2s;
+}
+
+.contact-info a:hover {
+    border-bottom: 1px solid white;
+    opacity: 1;
+}
+
+/* 主内容双栏布局 */
 .main-content {
     display: grid;
-    grid-template-columns: 1fr 2fr; /* Left column narrower, right column wider */
+    grid-template-columns: 1fr 2fr; /* 左侧占1份，右侧占2份 */
     gap: 30px;
     padding-bottom: 50px;
 }
 
-/* Section Styling */
+/* 模块样式 */
 .section {
     background: white;
     padding: 25px;
@@ -73,7 +105,7 @@ header h2 {
 
 .section-title {
     color: #2c3e50;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     border-bottom: 2px solid #3498db;
     padding-bottom: 10px;
     margin-bottom: 20px;
@@ -86,62 +118,10 @@ header h2 {
     color: #3498db;
 }
 
-/* Items & Typography */
-h4 {
-    color: #2c3e50;
-    font-size: 1.1rem;
-    margin-bottom: 2px;
-}
-
-.company, .institution {
-    font-weight: 600;
-    color: #555;
-    margin-bottom: 5px;
-}
-
-.date {
-    color: #888;
-    font-size: 0.9rem;
-    font-style: italic;
-    margin-bottom: 10px;
-    display: block;
-}
-
-.detail, .highlight {
-    font-size: 0.95rem;
-    color: #666;
-}
-
-.highlight {
-    color: #e67e22; /* Highlight color for CGPA */
-    font-weight: bold;
-    margin-top: 5px;
-}
-
-/* Lists */
-ul.job-details, ul.list-points {
-    list-style-type: disc;
-    margin-left: 20px;
-    margin-top: 10px;
-    color: #444;
-    font-size: 0.95rem;
-}
-
-ul.job-details li {
-    margin-bottom: 8px;
-}
-
-/* Specific: Experience Item Layout */
-.item-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    flex-wrap: wrap;
-}
-
+/* 通用条目样式 */
 .item {
     margin-bottom: 25px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #f0f0f0;
     padding-bottom: 15px;
 }
 
@@ -151,15 +131,72 @@ ul.job-details li {
     padding-bottom: 0;
 }
 
-/* Skills Tags */
+h4 {
+    color: #2c3e50;
+    font-size: 1.1rem;
+    margin-bottom: 3px;
+}
+
+.company, .institution {
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+}
+
+.date {
+    color: #888;
+    font-size: 0.9rem;
+    font-style: italic;
+    white-space: nowrap; /* 防止日期换行 */
+}
+
+/* 特殊布局：右侧栏的工作头部（职位+日期） */
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-bottom: 2px;
+}
+
+.detail, .highlight {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.highlight {
+    color: #e67e22; /* 强调色，用于显示 CGPA */
+    font-weight: bold;
+    margin-top: 5px;
+    display: block;
+}
+
+/* 列表样式 */
+ul.job-details, ul.list-points {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-top: 8px;
+    color: #444;
+    font-size: 0.95rem;
+}
+
+ul.job-details li {
+    margin-bottom: 6px;
+    line-height: 1.5;
+}
+
+/* 技能标签样式 */
 .skill-category {
     margin-bottom: 15px;
 }
 
 .skill-category h4 {
-    font-size: 1rem;
+    font-size: 0.95rem;
     margin-bottom: 8px;
     color: #444;
+    border-left: 3px solid #ddd;
+    padding-left: 8px;
 }
 
 .tags {
@@ -177,20 +214,21 @@ ul.job-details li {
     border: 1px solid #d1e3ef;
 }
 
-/* Footer */
+/* 页脚 */
 footer {
     text-align: center;
     padding: 20px;
-    color: #777;
-    font-size: 0.9rem;
-    border-top: 1px solid #ddd;
+    color: #888;
+    font-size: 0.85rem;
+    border-top: 1px solid #e0e0e0;
     margin-top: auto;
+    background-color: #fafafa;
 }
 
-/* Responsive Design */
+/* 移动端响应式调整 */
 @media (max-width: 768px) {
     .main-content {
-        grid-template-columns: 1fr; /* Stack columns on mobile */
+        grid-template-columns: 1fr; /* 手机上变为单栏 */
     }
     
     .item-header {
@@ -199,5 +237,10 @@ footer {
 
     header h1 {
         font-size: 2.2rem;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
     }
 }
