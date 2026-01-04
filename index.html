@@ -1,45 +1,187 @@
-<!doctype html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>我的个人网页</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Soo Chee Xian</title>
     <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container">
-        <h1>你的名字</h1>
-        <p class="tagline">这是一个简单的静态个人网页示例</p>
-      </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Soo Chee Xian</h1>
+            <h2>Machine Learning Engineer</h2>
+            <div class="contact-info">
+                
+                <span>
+                    <i class="fas fa-envelope"></i> 
+                    <a href="mailto:sokji1104@gmail.com" style="color: white; text-decoration: none;">sokji1104@gmail.com</a>
+                </span>
+
+                <span>
+                    <i class="fab fa-linkedin"></i> 
+                    <a href="https://www.linkedin.com/in/chee-xian-soo-452b1a17b/" target="_blank" style="color: white; text-decoration: underline;">
+                        LinkedIn Profile
+                    </a>
+                </span>
+
+                <span>
+                    <i class="fas fa-map-marker-alt"></i> Singapore
+                </span>
+                
+            </div>
+        </div>
     </header>
 
-    <main class="container">
-      <section id="about">
-        <h2>关于我</h2>
-        <p>写下你的介绍、职业、爱好或联络方式。</p>
-      </section>
+    <div class="container main-content">
+        
+        <div class="left-column">
+            
+            <section class="section education">
+                <h3 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h3>
+                
+                <div class="item">
+                    <h4>Master of Computer Science in AI</h4>
+                    <p class="institution">University of Malaya</p>
+                    <p class="date">Oct 2024 – Oct 2025</p>
+                    <p class="detail">Faculty of Computer Science and Information Technology</p>
+                    <p class="highlight">Current CGPA: 4.00/4.00</p>
+                </div>
 
-      <section id="projects">
-        <h2>项目</h2>
-        <ul>
-          <li>项目 A — 简短描述</li>
-          <li>项目 B — 简短描述</li>
-        </ul>
-      </section>
+                <div class="item">
+                    <h4>Bachelor of Science in Physics and Applied Physics</h4>
+                    <p class="institution">Nanyang Technological University, Singapore</p>
+                    <p class="date">Aug 2017 - May 2021</p>
+                    <p class="detail">School of Physical and Mathematical Sciences</p>
+                    <p class="highlight">Honours (Highest Distinction) CGPA: 4.88/5.00</p>
+                </div>
+            </section>
 
-      <section id="contact">
-        <h2>联系我</h2>
-        <p>邮箱：you@example.com</p>
-      </section>
-    </main>
+            <section class="section skills">
+                <h3 class="section-title"><i class="fas fa-code"></i> Skills</h3>
+                
+                <div class="skill-category">
+                    <h4>Programming & Databases</h4>
+                    <div class="tags">
+                        <span>Python</span><span>SQL (PostgreSQL)</span><span>MATLAB</span>
+                    </div>
+                </div>
 
-    <footer class="site-footer">
-      <div class="container">© <span id="year"></span> 你的名字</div>
+                <div class="skill-category">
+                    <h4>AI & GenAI Stack</h4>
+                    <div class="tags">
+                        <span>PyTorch</span><span>TensorFlow</span><span>LangChain</span>
+                        <span>Hugging Face Transformers</span><span>OpenCV</span><span>scikit-learn</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4>Cloud & Deployment</h4>
+                    <div class="tags">
+                        <span>Microsoft Azure (Server Management)</span><span>Flask</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4>Core Areas</h4>
+                    <div class="tags">
+                        <span>NLP</span><span>Sentiment Analysis</span><span>Computer Vision</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4>Languages</h4>
+                    <p>English (fluent), Chinese (fluent), Malay (fluent)</p>
+                </div>
+            </section>
+
+            <section class="section achievements">
+                <h3 class="section-title"><i class="fas fa-trophy"></i> Achievements & Awards</h3>
+                <ul class="list-points">
+                    <li><strong>Flexi Masters in Business and Financial Analytics</strong> (2023)</li>
+                    <li><strong>Dean’s list award</strong> in academic year 19-20 (2020)</li>
+                    <li><strong>ASEAN Undergraduate Scholarship</strong> (2017)</li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="right-column">
+            
+            <section class="section experience">
+                <h3 class="section-title"><i class="fas fa-briefcase"></i> Working Experience</h3>
+                
+                <div class="item">
+                    <div class="item-header">
+                        <h4>Machine Learning Engineer</h4>
+                        <span class="date">Oct 2025 – Present</span>
+                    </div>
+                    <p class="company">ICOMPASS Pte Ltd, Singapore</p>
+                    <ul class="job-details">
+                        <li><strong>AI-Driven Policy Generation:</strong> Architected an automated compliance system utilizing NLP to select relevant regulations and auto-generate tailored policy documents based on license types.</li>
+                        <li><strong>Automated Compliance Auditing:</strong> Built a "Policy Health Check" engine intelligently retrieving regulations to perform gap analysis and generate actionable revision suggestions.</li>
+                        <li><strong>Regulatory Update Logic:</strong> Implemented AI decision-making modules for regulatory changes, enabling analysis of new regulations to recommend drafting or updating policies.</li>
+                        <li><strong>Enterprise RAG Assistant:</strong> Developed and deployed a Retrieval-Augmented Generation (RAG) chatbot using Azure AI Search to index complex datasets (regulations, policies) for high-precision query resolution.</li>
+                    </ul>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <h4>Senior Process Integration Engineer</h4>
+                        <span class="date">Jun 2021 – Sep 2024</span>
+                    </div>
+                    <p class="company">United Microelectronics Corporation (UMC), Singapore</p>
+                    <ul class="job-details">
+                        <li>Led product ownership for 40/55nm Logic and 55nm RFSOI technologies, ensuring performance stability and timely delivery.</li>
+                        <li>Utilized advanced diagnostic tools (e.g., KLA ACE XP) and statistical analysis for yield issues, root cause analysis, and optimization.</li>
+                        <li>Collaborated with cross-functional teams (process, quality, R&D) to drive project success and communicate technical solutions.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section projects">
+                <h3 class="section-title"><i class="fas fa-flask"></i> Academic Projects</h3>
+                
+                <div class="item">
+                    <h4>Robot Bidder Detection via Deep Learning</h4>
+                    <p class="institution">University of Malaya</p>
+                    <ul class="job-details">
+                        <li>Developed a binary classifier in PyTorch to detect bots in online auctions from 7.6M bid records (Data Mining, ML, NLP).</li>
+                        <li>Engineered 40+ behavioral features (entropy, device/IP variance) and addressed class imbalance using SMOTE and focal loss.</li>
+                        <li>Achieved ROC-AUC 0.93 and bot recall of 90.5%.</li>
+                        <li>Tuned model with threshold optimization, batch normalization, and dropout regularization for a deployable production model.</li>
+                    </ul>
+                </div>
+
+                <div class="item">
+                    <h4>Gender Bias Detection via Semi-Supervised BERTweet Classifier</h4>
+                    <p class="institution">University of Malaya</p>
+                    <ul class="job-details">
+                        <li>Built a deep learning system for sexist content detection on social media using a BERTweet-based NLP architecture.</li>
+                        <li>Combined 14k labeled tweets with 600k+ unlabelled posts through pseudo-labeling and oversampling.</li>
+                        <li>Improved accuracy to 90.2% and F1-score to 90.0% using advanced training techniques (dropout, warmup schedules).</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section publications">
+                <h3 class="section-title"><i class="fas fa-book"></i> Publications</h3>
+                <div class="item">
+                    <p><strong>Lau, J. J., Soo, C. X., & Tan, S. L. (2020).</strong> On Local Antimagic Chromatic Number of Spider Graphs. <a href="https://doi.org/10.48550/arXiv.2008.09754" target="_blank">arXiv link</a></p>
+                    <ul class="job-details">
+                        <li>Investigated the local antimagic chromatic number for d-leg spider graphs using combinatorial techniques.</li>
+                        <li>Developed a Python-based numerical solver to eliminate up to 23! permutations, narrowing down to ~500 valid solutions.</li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Soo Chee Xian. All rights reserved.</p>
     </footer>
 
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-  </body>
+</body>
 </html>
